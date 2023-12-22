@@ -27,7 +27,7 @@ import java.util.Properties;
 
 @Configuration
 @EnableTransactionManagement
-@EnableJpaRepositories(basePackages = "customer")
+@EnableJpaRepositories(basePackages = "customer") //doi ten package
 public class JPAConfig {
 
 
@@ -59,7 +59,7 @@ public class JPAConfig {
 
     final Properties additionalProperties() {
         final Properties hibernateProperties = new Properties();
-        hibernateProperties.setProperty("hibernate.hbm2ddl.auto", "update");//update, create
+        hibernateProperties.setProperty("hibernate.hbm2ddl.auto", "create");//update, create
         hibernateProperties.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQL5InnoDBDialect");
         hibernateProperties.setProperty("hibernate.show_sql", "true");
         hibernateProperties.setProperty("hibernate.format_sql", "true");
